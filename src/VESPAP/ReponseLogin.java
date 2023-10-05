@@ -1,11 +1,23 @@
 package VESPAP;
 
-import hepl.be.ServeurGeneriqueTCP.Reponse;
-
 public class ReponseLogin implements Reponse
 {
     private boolean valide;
     private String message;
+
+    public void setValide(boolean valide) {
+        this.valide = valide;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    ReponseLogin()
+    {
+        valide = false;
+        message = "";
+    }
 
     ReponseLogin(boolean v, String m) {
         valide = v;

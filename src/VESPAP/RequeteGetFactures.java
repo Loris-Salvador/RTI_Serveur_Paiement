@@ -1,7 +1,5 @@
 package VESPAP;
 
-import hepl.be.ServeurGeneriqueTCP.Requete;
-
 public class RequeteGetFactures implements Requete {
     private int idClient;
 

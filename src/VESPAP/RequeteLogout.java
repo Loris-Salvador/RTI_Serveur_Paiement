@@ -1,7 +1,5 @@
 package VESPAP;
 
-import hepl.be.ServeurGeneriqueTCP.Requete;
-
 public class RequeteLogout implements Requete
 {
     private String login;

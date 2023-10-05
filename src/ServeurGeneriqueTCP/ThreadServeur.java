@@ -1,5 +1,7 @@
 package ServeurGeneriqueTCP;
 
+import db.DatabaseUseCase;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 public abstract class ThreadServeur extends Thread

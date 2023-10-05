@@ -1,5 +1,7 @@
 package ServeurGeneriqueTCP;
 
+import db.DatabaseUseCase;
+
 import java.io.IOException;
 import java.net.*;
 public class ThreadServeurPool extends ThreadServeur
@@ -8,8 +10,8 @@ public class ThreadServeurPool extends ThreadServeur
     private ThreadGroup pool;
     private int taillePool;
 
-    public ThreadServeurPool(int port, Protocole protocole, int taillePool, Logger
-            logger) throws IOException
+
+    public ThreadServeurPool(int port, Protocole protocole, int taillePool, Logger logger) throws IOException
     {
         super(port, protocole, logger);
 

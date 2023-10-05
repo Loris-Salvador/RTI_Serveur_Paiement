@@ -1,12 +1,14 @@
 package ServeurGeneriqueTCP;
 
+import db.DatabaseConnection;
+import db.DatabaseUseCase;
+
 import java.io.IOException;
 public class ThreadClientPool extends ThreadClient
 {
     private FileAttente connexionsEnAttente;
 
-    public ThreadClientPool(Protocole protocole, FileAttente file, ThreadGroup
-            groupe, Logger logger) throws IOException
+    public ThreadClientPool(Protocole protocole, FileAttente file, ThreadGroup groupe, Logger logger) throws IOException
     {
         super(protocole, groupe, logger);
         connexionsEnAttente = file;

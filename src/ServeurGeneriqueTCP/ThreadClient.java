@@ -1,5 +1,8 @@
 package ServeurGeneriqueTCP;
 
+import VESPAP.Reponse;
+import VESPAP.Requete;
+
 import java.io.*;
 import java.net.Socket;
 public abstract class ThreadClient extends Thread
@@ -47,7 +50,7 @@ public abstract class ThreadClient extends Thread
                 while (true)
                 {
                     Requete requete = (Requete) ois.readObject();
-                    Reponse reponse = protocole.TraiteRequete(requete,csocket);
+                    Reponse reponse = protocole.TraiteRequete(requete);
                     oos.writeObject(reponse);
                 }
             }
