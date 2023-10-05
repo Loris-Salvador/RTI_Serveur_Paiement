@@ -4,6 +4,7 @@ import ServeurGeneriqueTCP.Exception.FinConnexionException;
 import ServeurGeneriqueTCP.Logger.Logger;
 import db.DatabaseUseCase;
 import model.Facture;
+import VESPAP.*;
 
 import java.util.ArrayList;
 
