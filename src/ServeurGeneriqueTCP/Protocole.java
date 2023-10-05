@@ -1,4 +1,4 @@
-package ServeurGeneriqueTCP.ServeurGeneriqueTCP;
+package ServeurGeneriqueTCP;
 import java.net.Socket;
 public interface Protocole
 {

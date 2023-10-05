@@ -1,4 +1,4 @@
-package ServeurGeneriqueTCP.ServeurGeneriqueTCP;
+package ServeurGeneriqueTCP;
 public class FinConnexionException extends Exception
 {
     private Reponse reponse;
