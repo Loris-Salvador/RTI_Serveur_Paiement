@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Facture {
+public class Facture implements Serializable {
     private int idFacture;
     private Date date;
     private float montant;

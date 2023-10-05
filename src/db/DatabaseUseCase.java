@@ -1,6 +1,8 @@
 package db;
 
+import ServeurGeneriqueTCP.Logger.Logger;
 import VESPAP.Reponse;
+import model.Article;
 import model.Facture;
 
 import java.sql.ResultSet;
@@ -9,6 +11,13 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class DatabaseUseCase {
+
+    private Logger logger;
+
+    public DatabaseUseCase(Logger logger)
+    {
+        this.logger = logger;
+    }
 
     public synchronized boolean isUsernameExists(String username)  {
         String query = "SELECT * FROM EMPLOYE WHERE USERNAME = '" + username + "'";
@@ -82,16 +91,21 @@ public class DatabaseUseCase {
     {
         ArrayList<Facture> factures = new ArrayList<>();
 
-        String query = "SELECT * FROM FACTURE WHERE ID_CLIENT = " + idClient;
+        String query = "SELECT * FROM FACTURE WHERE ID_CLIENT = " + idClient + " AND DATE_PAIEMENT IS NOT NULL";
 
         ResultSet resultSet = DatabaseConnection.executeQuery(query);
 
+        logger.Trace("Factures de " + idClient);
+
         while(resultSet.next())
         {
-            int idFacture = resultSet.getInt("ID_FACTURE");
+            logger.Trace("Facture trouvée");
+            int idFacture = resultSet.getInt("ID");
             int idClientDB = resultSet.getInt("ID_CLIENT");
             Date date = resultSet.getDate("DATE_PAIEMENT");
             boolean etat = resultSet.getBoolean("PAYER");
+
+            logger.Trace("Facture " + idFacture + " " + idClientDB + " " + date + " " + etat);
 
             float montant = 0;
 
@@ -105,7 +119,9 @@ public class DatabaseUseCase {
                 int quantite = resultSet2.getInt("QUANTITE");
                 int idArticle = resultSet2.getInt("ID_ARTICLE");
 
-                String query3 = "SELECT * FROM ARTICLE WHERE ID_ARTICLE = " + idArticle;
+                logger.Trace("Article " + quantite + " " + idArticle);
+
+                String query3 = "SELECT * FROM ARTICLE WHERE ID = " + idArticle;
 
                 ResultSet resultSet3 = DatabaseConnection.executeQuery(query3);
 
@@ -164,6 +180,43 @@ public class DatabaseUseCase {
         DatabaseConnection.executeUpdate(query3);
 
         return "OK";
+    }
+
+    public synchronized ArrayList<Article> getArticles(int idFacture)
+    {
+        logger.Trace("get Articles");
+
+        String query = "SELECT * FROM ARTICLE_FACTURE WHERE ID_FACTURE = " + idFacture;
+
+        ArrayList<Article> articles = new ArrayList<>();
+
+        try {
+            ResultSet resultSet = DatabaseConnection.executeQuery(query);
+
+            while(resultSet.next())
+            {
+                int idArticle = resultSet.getInt("ID_ARTICLE");
+                String query2 = "SELECT * FROM ARTICLE WHERE ID = " + idArticle;
+                int quantite = resultSet.getInt("QUANTITE");
+
+                ResultSet resultSet2 = DatabaseConnection.executeQuery(query2);
+
+                resultSet2.next();
+                Article article = new Article(resultSet2.getString("INTITULE"), quantite, resultSet2.getFloat("PRIX"));
+
+                articles.add(article);
+
+            }
+
+            return articles;
+
+
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
     }
 
 

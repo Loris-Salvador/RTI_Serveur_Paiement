@@ -20,7 +20,7 @@ public class Main {
 
         MonLogger logger = new MonLogger();
 
-        DatabaseUseCase databaseUseCase = new DatabaseUseCase();
+        DatabaseUseCase databaseUseCase = new DatabaseUseCase(logger);
         VESPAP vespap = new VESPAP(logger,databaseUseCase);
 
         try {
@@ -29,6 +29,7 @@ public class Main {
         }
         catch (Exception e)
         {
+            System.out.println("Erreur lors du lancement du serveur");
             e.printStackTrace();
             System.exit(1);
         }

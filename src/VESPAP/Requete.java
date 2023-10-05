@@ -1,4 +1,4 @@
 package VESPAP;
 
-import java.io.*;
+import java.io.Serializable;
 public interface Requete extends Serializable { }

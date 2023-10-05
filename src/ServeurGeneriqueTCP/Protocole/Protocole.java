@@ -1,7 +1,6 @@
 package ServeurGeneriqueTCP.Protocole;
 import ServeurGeneriqueTCP.Exception.FinConnexionException;
-import VESPAP.Reponse;
-import VESPAP.Requete;
+import VESPAP.*;
 
 public interface Protocole
 {
