@@ -1,4 +1,4 @@
-package ServeurGeneriqueTCP;
+package ServeurGeneriqueTCP.Exception;
 
 import VESPAP.Reponse;
 

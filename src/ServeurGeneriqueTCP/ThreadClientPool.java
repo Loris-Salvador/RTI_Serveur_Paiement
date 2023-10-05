@@ -1,7 +1,7 @@
 package ServeurGeneriqueTCP;
 
-import db.DatabaseConnection;
-import db.DatabaseUseCase;
+import ServeurGeneriqueTCP.Logger.Logger;
+import ServeurGeneriqueTCP.Protocole.Protocole;
 
 import java.io.IOException;
 public class ThreadClientPool extends ThreadClient

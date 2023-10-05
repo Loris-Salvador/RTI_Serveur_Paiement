@@ -1,5 +1,6 @@
 package db;
 
+import VESPAP.Reponse;
 import model.Facture;
 
 import java.sql.ResultSet;
@@ -32,7 +33,7 @@ public class DatabaseUseCase {
     }
 
     public synchronized boolean isLoginOk(String username, String password)  {
-        String query = "SELECT * FROM EMPLOYE WHERE USERNAME = '" + username;
+        String query = "SELECT * FROM EMPLOYE WHERE USERNAME = '" + username + "'";
 
         try {
 
@@ -59,6 +60,9 @@ public class DatabaseUseCase {
     }
 
     public synchronized boolean addEmploye(String username, String password) {
+
+        System.out.println("addEmploye");
+
         String query = "INSERT INTO EMPLOYE (USERNAME, PASSWORD) VALUES ('" + username + "', '" + password + "')";
 
         try
@@ -122,10 +126,44 @@ public class DatabaseUseCase {
         }
 
         return factures;
+    }
 
 
 
+    public synchronized String payFacture(int idFacture, String nom, int numeroCarte) throws SQLException
+    {
+        String query = "SELECT * FROM CARTE_BANCAIRE WHERE NUMERO_CARTE = " + numeroCarte;
 
+        ResultSet resultSet = DatabaseConnection.executeQuery(query);
+
+        if(!resultSet.next())
+        {
+            return "Carte bancaire invalide";
+        }
+
+        int idClient = resultSet.getInt("ID_CLIENT");
+
+        String query2 = "SELECT * FROM CLIENT WHERE ID_CLIENT = " + idClient;
+
+        ResultSet resultSet2 = DatabaseConnection.executeQuery(query2);
+
+        if(!resultSet2.next())
+        {
+            return "jamais arrive";
+        }
+
+        String nomDB = resultSet2.getString("USERNAME");
+
+        if(!nomDB.equals(nom))
+        {
+            return "Nom invalide";
+        }
+
+        String query3 = "UPDATE FACTURE SET PAYER = TRUE WHERE ID_FACTURE = " + idFacture;
+
+        DatabaseConnection.executeUpdate(query3);
+
+        return "OK";
     }
 
 

@@ -1,4 +1,4 @@
-package ServeurGeneriqueTCP;
+package ServeurGeneriqueTCP.Logger;
 
 public interface Logger
 {

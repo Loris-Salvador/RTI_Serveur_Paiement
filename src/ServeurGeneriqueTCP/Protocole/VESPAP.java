@@ -1,11 +1,10 @@
-package VESPAP;
+package ServeurGeneriqueTCP.Protocole;
 
-import ServeurGeneriqueTCP.*;
-import db.DatabaseConnection;
+import ServeurGeneriqueTCP.Exception.FinConnexionException;
+import ServeurGeneriqueTCP.Logger.Logger;
 import db.DatabaseUseCase;
 import model.Facture;
 
-import java.net.Socket;
 import java.util.ArrayList;
 
 public class VESPAP implements Protocole {
@@ -26,14 +25,14 @@ public class VESPAP implements Protocole {
     }
 
     @Override
-    public synchronized Reponse TraiteRequete(Requete requete, DatabaseUseCase databaseUseCase) throws FinConnexionException {
+    public synchronized Reponse TraiteRequete(Requete requete) throws FinConnexionException {
 
         if(requete instanceof RequeteLogin)
             return TraiteRequeteLogin((RequeteLogin)requete);
         else if(requete instanceof RequeteGetFactures)
             return TraiteRequeteGetFactures((RequeteGetFactures)requete);
        else if(requete instanceof RequetePayFacture)
-//            return TraiteRequetePayFacture((RequetePayFacture)requete);
+            return TraiteRequetePayFacture((RequetePayFacture)requete);
         if(requete instanceof RequeteLogout)
             TraiteRequeteLogout((RequeteLogout)requete);
         return null;
@@ -103,8 +102,19 @@ public class VESPAP implements Protocole {
 
     }
 
-    private synchronized void TraiteRequetePayFacture(RequetePayFacture requete)
+    private synchronized Reponse TraiteRequetePayFacture(RequetePayFacture requete)
     {
+        try {
+            String message = databaseUseCase.payFacture(requete.getIdFacture(), requete.getNom(), requete.getNumeroCarte());
+            if(message.equals("OK"))
+                return new ReponsePayFacture(true, "PAYER");
+            else
+                return new ReponsePayFacture(false, message);
+        }
+        catch (Exception e)
+        {
+            return new ReponsePayFacture(false, "Probleme BD");
+        }
 
     }
 

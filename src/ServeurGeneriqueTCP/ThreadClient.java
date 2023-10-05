@@ -1,7 +1,9 @@
 package ServeurGeneriqueTCP;
 
-import VESPAP.Reponse;
-import VESPAP.Requete;
+import ServeurGeneriqueTCP.Exception.FinConnexionException;
+import ServeurGeneriqueTCP.Logger.Logger;
+import ServeurGeneriqueTCP.Protocole.Protocole;
+import VESPAP.*;
 
 import java.io.*;
 import java.net.Socket;
@@ -49,8 +51,11 @@ public abstract class ThreadClient extends Thread
 
                 while (true)
                 {
+                    System.out.println("yoServeur");
                     Requete requete = (Requete) ois.readObject();
+                    System.out.println("yo1Serveur");
                     Reponse reponse = protocole.TraiteRequete(requete);
+                    System.out.println("yo2Serveur");
                     oos.writeObject(reponse);
                 }
             }
