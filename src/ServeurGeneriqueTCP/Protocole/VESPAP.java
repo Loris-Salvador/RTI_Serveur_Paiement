@@ -69,7 +69,7 @@ public class VESPAP implements Protocole {
                 if(databaseUseCase.isUsernameExists(username))
                 {
                     reponseLogin.setMessage("Mauvais mot de passe");
-                    throw new FinConnexionException(new ReponseLogin(false, "Mauvais"));
+                    throw new FinConnexionException(reponseLogin);
 
                 }
                 else

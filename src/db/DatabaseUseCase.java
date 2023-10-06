@@ -95,8 +95,6 @@ public class DatabaseUseCase {
 
         ResultSet resultSet = DatabaseConnection.executeQuery(query);
 
-        logger.Trace("Factures de " + idClient);
-
         while(resultSet.next())
         {
             logger.Trace("Facture trouvée");
@@ -104,8 +102,6 @@ public class DatabaseUseCase {
             int idClientDB = resultSet.getInt("ID_CLIENT");
             Date date = resultSet.getDate("DATE_PAIEMENT");
             boolean etat = resultSet.getBoolean("PAYER");
-
-            logger.Trace("Facture " + idFacture + " " + idClientDB + " " + date + " " + etat);
 
             float montant = 0;
 
@@ -118,8 +114,6 @@ public class DatabaseUseCase {
             {
                 int quantite = resultSet2.getInt("QUANTITE");
                 int idArticle = resultSet2.getInt("ID_ARTICLE");
-
-                logger.Trace("Article " + quantite + " " + idArticle);
 
                 String query3 = "SELECT * FROM ARTICLE WHERE ID = " + idArticle;
 
@@ -159,7 +153,7 @@ public class DatabaseUseCase {
 
         int idClient = resultSet.getInt("ID_CLIENT");
 
-        String query2 = "SELECT * FROM CLIENT WHERE ID_CLIENT = " + idClient;
+        String query2 = "SELECT * FROM CLIENT WHERE ID = " + idClient;
 
         ResultSet resultSet2 = DatabaseConnection.executeQuery(query2);
 
@@ -175,7 +169,7 @@ public class DatabaseUseCase {
             return "Nom invalide";
         }
 
-        String query3 = "UPDATE FACTURE SET PAYER = TRUE WHERE ID_FACTURE = " + idFacture;
+        String query3 = "UPDATE FACTURE SET PAYER = TRUE WHERE ID = " + idFacture;
 
         DatabaseConnection.executeUpdate(query3);
 
@@ -184,8 +178,6 @@ public class DatabaseUseCase {
 
     public synchronized ArrayList<Article> getArticles(int idFacture)
     {
-        logger.Trace("get Articles");
-
         String query = "SELECT * FROM ARTICLE_FACTURE WHERE ID_FACTURE = " + idFacture;
 
         ArrayList<Article> articles = new ArrayList<>();
