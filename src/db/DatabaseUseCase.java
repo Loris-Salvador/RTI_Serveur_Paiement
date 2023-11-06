@@ -1,7 +1,6 @@
 package db;
 
 import ServeurGeneriqueTCP.Logger.Logger;
-import VESPAP.Reponse;
 import model.Article;
 import model.Facture;
 
@@ -45,8 +44,6 @@ public class DatabaseUseCase {
         String query = "SELECT * FROM EMPLOYE WHERE USERNAME = '" + username + "'";
 
         try {
-
-
             ResultSet resultSet = DatabaseConnection.executeQuery(query);
 
             if (resultSet.next()) {
@@ -65,6 +62,29 @@ public class DatabaseUseCase {
             e.printStackTrace();
             System.exit(1);
             return false;
+        }
+    }
+
+    public synchronized String getPassword(String username)  {
+        String query = "SELECT * FROM EMPLOYE WHERE USERNAME = '" + username + "'";
+
+        try {
+            ResultSet resultSet = DatabaseConnection.executeQuery(query);
+
+            if (resultSet.next()) {
+                String passwordDB = resultSet.getString("PASSWORD");
+
+                return passwordDB;
+            }
+
+            return "";
+        }
+
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+            System.exit(1);
+            return "";
         }
     }
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a8e7736-08e0-4b78-b0cb-56f3e50f1e16" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/config_non_securise.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config_securise.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/VESPAPS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadClientDemande.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadServeurDemande.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/MyCrypto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/ReponseGetArticles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/ReponseGetFactures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/ReponseLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/ReponsePayFacture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteGetArticles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteGetFactures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteLoginNewEmploye.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequetePayFacture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/communication/Reponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServeurPaiement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ServeurPaiement.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Exception/FinConnexionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Exception/FinConnexionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/Protocole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/Protocole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/VESPAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/VESPAP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/Reponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/ReponseGetArticles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/ReponseGetFactures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/ReponseLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/ReponsePayFacture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/Requete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequeteGetArticles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequeteGetFactures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequeteLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequeteLogout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteLogout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequetePayFacture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/DatabaseUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/DatabaseUseCase.java" afterDir="false" />
+    </list>
+    <list id="85f111b7-d3de-4610-84fe-687b0ec489f6" name="Changes by antoi" comment="">
+      <change beforePath="$PROJECT_DIR$/src/db/DatabaseUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/DatabaseUseCase.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/db/DatabaseUseCase.java">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="3" changelist="6a8e7736-08e0-4b78-b0cb-56f3e50f1e16" />
+        <range start1="47" end1="49" start2="46" end2="46" changelist="6a8e7736-08e0-4b78-b0cb-56f3e50f1e16" />
+        <range start1="69" end1="69" start2="66" end2="89" changelist="85f111b7-d3de-4610-84fe-687b0ec489f6" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2XLMw96OA8AXmcs9CiZklkcAoPn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/loris/Desktop/B3/RTI/Labo/ClientJava",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\loris\Desktop\B3\RTI\Labo\RTI_JAVA_Securise\RTI_Serveur_Paiement_Securisé\src\nonSecurise" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="db" />
+      <recent name="ServeurGeneriqueTCP.Protocole" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>

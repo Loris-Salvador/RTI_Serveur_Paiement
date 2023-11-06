@@ -1,5 +1,7 @@
 package VESPAP;
 
+import communication.Requete;
+
 public class RequeteGetFactures implements Requete {
     private int idClient;
 

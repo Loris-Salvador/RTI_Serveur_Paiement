@@ -1,7 +1,8 @@
 package VESPAP;
 
-public class RequeteLogin implements Requete
-{
+import communication.Requete;
+
+public class RequeteLogin implements Requete {
     private String login;
     private String password;
     private boolean newEmploye;

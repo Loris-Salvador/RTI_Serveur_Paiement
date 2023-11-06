@@ -1,6 +1,6 @@
 package ServeurGeneriqueTCP.Exception;
 
-import VESPAP.Reponse;
+import communication.Reponse;
 
 public class FinConnexionException extends Exception
 {

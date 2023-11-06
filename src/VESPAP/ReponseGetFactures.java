@@ -1,11 +1,11 @@
 package VESPAP;
 
+import communication.Reponse;
 import model.Facture;
 
 import java.util.ArrayList;
 
-public class ReponseGetFactures implements Reponse
-{
+public class ReponseGetFactures implements Reponse {
     private String message;
     private ArrayList<Facture> tableauFactures;
 

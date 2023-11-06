@@ -1,10 +1,11 @@
 package VESPAP;
 
+import communication.Reponse;
 import model.Article;
 
 import java.util.ArrayList;
 
-public class ReponseGetArticles implements Reponse{
+public class ReponseGetArticles implements Reponse {
     private ArrayList<Article> articles;
 
     public ReponseGetArticles(ArrayList<Article> articles)

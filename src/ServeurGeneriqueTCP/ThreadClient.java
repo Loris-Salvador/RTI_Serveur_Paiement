@@ -2,11 +2,15 @@ package ServeurGeneriqueTCP;
 
 import ServeurGeneriqueTCP.Exception.FinConnexionException;
 import ServeurGeneriqueTCP.Logger.Logger;
-import ServeurGeneriqueTCP.Protocole.Protocole;
-import VESPAP.*;
+import ServeurGeneriqueTCP.Protocole.*;
+import communication.Reponse;
+import communication.Requete;
 
 import java.io.*;
 import java.net.Socket;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+
 public abstract class ThreadClient extends Thread
 {
     protected Protocole protocole;
@@ -63,8 +67,13 @@ public abstract class ThreadClient extends Thread
                     oos.writeObject(ex.getReponse());
             }
         }
-        catch (IOException ex) { logger.Trace("Erreur I/O"); }
-        catch (ClassNotFoundException ex) { logger.Trace("Erreur requete invalide");
+        catch (IOException ex)
+        {
+            logger.Trace("Erreur I/O" + ex.getMessage());
+        }
+        catch (ClassNotFoundException | NoSuchAlgorithmException | NoSuchProviderException ex)
+        {
+            logger.Trace("Erreur requete invalide");
         }
         finally
         {

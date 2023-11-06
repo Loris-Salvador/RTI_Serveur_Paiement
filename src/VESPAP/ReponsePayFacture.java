@@ -1,7 +1,8 @@
 package VESPAP;
 
-public class ReponsePayFacture implements Reponse
-{
+import communication.Reponse;
+
+public class ReponsePayFacture implements Reponse {
     private boolean valide;
     private String message;
 

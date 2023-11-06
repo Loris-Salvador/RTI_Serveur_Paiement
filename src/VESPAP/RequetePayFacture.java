@@ -1,7 +1,8 @@
 package VESPAP;
 
-public class RequetePayFacture implements Requete
-{
+import communication.Requete;
+
+public class RequetePayFacture implements Requete {
     private int idFacture;
     private String nom;
     private int numeroCarte;

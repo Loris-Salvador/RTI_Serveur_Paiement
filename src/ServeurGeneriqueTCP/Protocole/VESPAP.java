@@ -2,6 +2,8 @@ package ServeurGeneriqueTCP.Protocole;
 
 import ServeurGeneriqueTCP.Exception.FinConnexionException;
 import ServeurGeneriqueTCP.Logger.Logger;
+import communication.Reponse;
+import communication.Requete;
 import db.DatabaseUseCase;
 import model.Facture;
 import VESPAP.*;

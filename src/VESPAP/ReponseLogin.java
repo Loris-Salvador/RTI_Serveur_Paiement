@@ -1,7 +1,8 @@
 package VESPAP;
 
-public class ReponseLogin implements Reponse
-{
+import communication.Reponse;
+
+public class ReponseLogin implements Reponse {
     private boolean valide;
     private String message;
 
