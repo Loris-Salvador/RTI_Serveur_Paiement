@@ -8,6 +8,15 @@ import db.DatabaseUseCase;
 import model.Facture;
 import VESPAP.*;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.cert.CertificateException;
 import java.util.ArrayList;
 
 public class VESPAP implements Protocole {
@@ -42,6 +51,11 @@ public class VESPAP implements Protocole {
             TraiteRequeteLogout((RequeteLogout)requete);
        else if(requete instanceof RequeteGetArticles)
             return TraiteRequeteGetArticle((RequeteGetArticles)requete);
+        return null;
+    }
+
+    @Override
+    public Reponse rejectRequete() {
         return null;
     }
 

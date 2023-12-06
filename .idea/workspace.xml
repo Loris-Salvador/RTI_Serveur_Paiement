@@ -4,50 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8e7736-08e0-4b78-b0cb-56f3e50f1e16" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config_non_securise.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config_securise.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/VESPAPS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadClientDemande.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadServeurDemande.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/MyCrypto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/ReponseGetArticles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/ReponseGetFactures.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/ReponseLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/ReponsePayFacture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteGetArticles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteGetFactures.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteLoginNewEmploye.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VESPAPS/RequetePayFacture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/communication/Reponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServeurPaiement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ServeurPaiement.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Exception/FinConnexionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Exception/FinConnexionException.java" afterDir="false" />
+    <list default="true" id="6a8e7736-08e0-4b78-b0cb-56f3e50f1e16" name="Changes" comment="test2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config_securise.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config_securise.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/Protocole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/Protocole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/VESPAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/VESPAP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/Reponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/ReponseGetArticles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/ReponseGetFactures.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/ReponseLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/ReponsePayFacture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/Requete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequeteGetArticles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequeteGetFactures.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequeteLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequeteLogout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VESPAPS/RequeteLogout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VESPAP/RequetePayFacture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/DatabaseUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/DatabaseUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/VESPAPS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/Protocole/VESPAPS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadServeurDemande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServeurGeneriqueTCP/ThreadServeurDemande.java" afterDir="false" />
     </list>
-    <list id="85f111b7-d3de-4610-84fe-687b0ec489f6" name="Changes by antoi" comment="">
-      <change beforePath="$PROJECT_DIR$/src/db/DatabaseUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/DatabaseUseCase.java" afterDir="false" />
-    </list>
+    <list id="85f111b7-d3de-4610-84fe-687b0ec489f6" name="Changes by antoi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,15 +28,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/db/DatabaseUseCase.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="3" changelist="6a8e7736-08e0-4b78-b0cb-56f3e50f1e16" />
-        <range start1="47" end1="49" start2="46" end2="46" changelist="6a8e7736-08e0-4b78-b0cb-56f3e50f1e16" />
-        <range start1="69" end1="69" start2="66" end2="89" changelist="85f111b7-d3de-4610-84fe-687b0ec489f6" />
-      </ranges>
-    </file>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -84,8 +40,11 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/loris/Desktop/B3/RTI/Labo/ClientJava",
+    "last_opened_file_path": "C:/Users/loris/Desktop/B3/RTI/Labo/RTI_Client_Paiement_Securisé",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -98,5 +57,60 @@
       <recent name="ServeurGeneriqueTCP.Protocole" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Start" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="RTI_Serveur_Paiement_Securisé" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <MESSAGE value="test2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test2" />
+  </component>
 </project>

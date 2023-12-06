@@ -55,6 +55,13 @@ public class VESPAPS implements Protocole {
         return null;
     }
 
+    @Override
+    public synchronized Reponse rejectRequete() throws CertificateException, KeyStoreException, IOException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, NoSuchProviderException, InvalidKeyException {
+
+
+        return new ReponseLogin("Trop de clients connectes", false, null, RecupereClePubliqueClient());
+    }
+
 
     private synchronized Reponse TraiteRequeteLogin(RequeteLogin requeteLogin) throws FinConnexionException {
         logger.Trace("RequeteLOGIN reçue de " + requeteLogin.getLogin());

@@ -1,8 +1,20 @@
 package ServeurGeneriqueTCP;
 
+import ServeurGeneriqueTCP.Exception.FinConnexionException;
 import ServeurGeneriqueTCP.Logger.Logger;
 import ServeurGeneriqueTCP.Protocole.Protocole;
+import VESPAPS.ReponseLogin;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.security.InvalidKeyException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.cert.CertificateException;
 import java.util.concurrent.*;
 import java.net.*;
 public class ThreadServeurDemande extends ThreadServeur
@@ -23,7 +35,7 @@ public class ThreadServeurDemande extends ThreadServeur
         logger.Trace("Démarrage du TH Serveur (Demande)...");
         while(!this.isInterrupted())
         {
-            Socket csocket;
+            Socket csocket = null;
             try {
                 //ssocket.setSoTimeout(2000);
 
@@ -33,7 +45,9 @@ public class ThreadServeurDemande extends ThreadServeur
                 logger.Trace("GetActive: "+executor.getActiveCount() + " nbthread: " + nbThread);
                 if(executor.getActiveCount() == nbThread)
                 {
-                    ssocket.close();
+                    ObjectOutputStream oos = new ObjectOutputStream(csocket.getOutputStream());
+                    oos.writeObject(protocole.rejectRequete());
+                    //csocket.close(); affiche pas le message
                     logger.Trace("Connexion refusée, Trop de TH Client");
                 }
                 else
@@ -49,6 +63,24 @@ public class ThreadServeurDemande extends ThreadServeur
             catch (IOException ex)
             {
                 logger.Trace("Erreur I/O");
+            } catch (FinConnexionException e) {
+                throw new RuntimeException(e);
+            } catch (NoSuchPaddingException e) {
+                throw new RuntimeException(e);
+            } catch (IllegalBlockSizeException e) {
+                throw new RuntimeException(e);
+            } catch (CertificateException e) {
+                throw new RuntimeException(e);
+            } catch (KeyStoreException e) {
+                throw new RuntimeException(e);
+            } catch (NoSuchAlgorithmException e) {
+                throw new RuntimeException(e);
+            } catch (BadPaddingException e) {
+                throw new RuntimeException(e);
+            } catch (NoSuchProviderException e) {
+                throw new RuntimeException(e);
+            } catch (InvalidKeyException e) {
+                throw new RuntimeException(e);
             }
         }
             logger.Trace("TH Serveur (Demande) interrompu.");
